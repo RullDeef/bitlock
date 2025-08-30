@@ -1,0 +1,192 @@
+[gd_scene load_steps=17 format=3 uid="uid://dbul6bihac8ac"]
+
+[ext_resource type="Script" uid="uid://lwoidw7knq0d" path="res://game/bit_holder.gd" id="1_3osq5"]
+[ext_resource type="PackedScene" uid="uid://rdas8502frsn" path="res://game/bit.tscn" id="2_0s6o8"]
+[ext_resource type="Shader" uid="uid://cd65qaxsac41b" path="res://game/bit.gdshader" id="3_83cmq"]
+[ext_resource type="PackedScene" uid="uid://da28einy2mwu5" path="res://game/swapper.tscn" id="4_oa506"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3osq5"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0s6o8"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_83cmq"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oa506"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tldlu"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flopp"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ly8c"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_npav2"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rsb6i"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iojvb"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rjuli"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ayw8f"]
+resource_local_to_scene = true
+shader = ExtResource("3_83cmq")
+shader_parameter/value = 0.0
+shader_parameter/base_color = Vector3(1, 1, 1)
+shader_parameter/clickable = 1.0
+
+[node name="BitHolder" type="Node2D"]
+script = ExtResource("1_3osq5")
+max_value = 4
+
+[node name="Bit5" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_3osq5")
+position = Vector2(696, 320)
+
+[node name="Bit11" parent="." instance=ExtResource("2_0s6o8")]
+visible = false
+material = SubResource("ShaderMaterial_3osq5")
+position = Vector2(776, 320)
+clickable = false
+
+[node name="Bit7" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_0s6o8")
+position = Vector2(584, 480)
+clickable = false
+value = 4
+
+[node name="Bit10" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_83cmq")
+position = Vector2(584, 320)
+
+[node name="Bit8" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_oa506")
+position = Vector2(584, 400)
+clickable = false
+value = 3
+
+[node name="Bit12" parent="." instance=ExtResource("2_0s6o8")]
+visible = false
+material = SubResource("ShaderMaterial_oa506")
+position = Vector2(504, 400)
+clickable = false
+value = 3
+
+[node name="Bit14" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_tldlu")
+position = Vector2(584, 240)
+
+[node name="Bit15" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_flopp")
+position = Vector2(504, 320)
+clickable = false
+value = 2
+
+[node name="Bit16" parent="." instance=ExtResource("2_0s6o8")]
+visible = false
+material = SubResource("ShaderMaterial_flopp")
+position = Vector2(504, 240)
+clickable = false
+
+[node name="Bit18" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_8ly8c")
+position = Vector2(504, 480)
+
+[node name="Bit17" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_npav2")
+position = Vector2(776, 400)
+
+[node name="Bit6" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_rsb6i")
+position = Vector2(696, 400)
+clickable = false
+
+[node name="Bit19" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_iojvb")
+position = Vector2(696, 480)
+
+[node name="Bit21" parent="." instance=ExtResource("2_0s6o8")]
+visible = false
+material = SubResource("ShaderMaterial_iojvb")
+position = Vector2(776, 480)
+clickable = false
+
+[node name="Bit9" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_rjuli")
+position = Vector2(696, 240)
+
+[node name="Bit20" parent="." instance=ExtResource("2_0s6o8")]
+material = SubResource("ShaderMaterial_ayw8f")
+position = Vector2(776, 240)
+clickable = false
+value = 1
+
+[node name="Mirror" type="Line2D" parent="."]
+points = PackedVector2Array(640, 0, 640, 720)
+width = 1.0
+
+[node name="Swapper" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_oa506")]
+bit_seq = [NodePath("../Bit14"), NodePath("../Bit16")]
+
+[node name="Swapper2" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_oa506")]
+bit_seq = [NodePath("../Bit5"), NodePath("../Bit11")]
+
+[node name="Swapper3" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_oa506")]
+bit_seq = [NodePath("../Bit8"), NodePath("../Bit12")]
+
+[node name="Swapper4" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_oa506")]
+bit_seq = [NodePath("../Bit19"), NodePath("../Bit21")]

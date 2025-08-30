@@ -16,6 +16,7 @@ var max_value := 5:
 @export var value: int = 0:
 	set(new_value):
 		value = new_value
+		$Sprite/Label.text = "%d" % value if value > 0 else ""
 		_update_shader()
 
 signal before_clicked(Bit)
@@ -33,6 +34,7 @@ func _update_shader() -> void:
 	if mat != null:
 		var base_color := Color(0.4, 1.0, 0.4) if clickable else Color(1.0, 0.4, 0.4)
 		mat.set_shader_parameter(&"base_color", base_color)
+		mat.set_shader_parameter(&"clickable", 1.0 if clickable else 0.0)
 		mat.set_shader_parameter(&"value", float(value) / max_value)
 		$Sprite.queue_redraw()
 

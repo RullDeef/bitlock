@@ -51,7 +51,7 @@ func check_solution() -> bool:
 	var bits_red: Array[Bit] = []
 	var mirrors: Array[Line2D] = []
 	for child in get_children():
-		if child is Bit:
+		if child is Bit and child.visible:
 			var bit := child as Bit
 			(bits_green if bit.clickable else bits_red).append(bit)
 		if child is Line2D:
@@ -69,5 +69,6 @@ func check_solution() -> bool:
 				if red_bit.position == mirrored_pos:
 					if green_bit.value != red_bit.value:
 						satisfied = false
+						print("failed constraint at ", green_bit.global_position, red_bit.global_position)
 					break
 	return satisfied
