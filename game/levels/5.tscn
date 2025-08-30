@@ -206,14 +206,11 @@ value = 2
 points = PackedVector2Array(640, 0, 640, 720)
 width = 1.0
 
-[node name="Swapper" parent="." node_paths=PackedStringArray("bit_1", "bit_2") instance=ExtResource("4_ko3uc")]
-bit_1 = NodePath("../Bit1")
-bit_2 = NodePath("../Bit2")
+[node name="Swapper" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_ko3uc")]
+bit_seq = [NodePath("../Bit1"), NodePath("../Bit2")]
 
-[node name="Swapper2" parent="." node_paths=PackedStringArray("bit_1", "bit_2") instance=ExtResource("4_ko3uc")]
-bit_1 = NodePath("../Bit5")
-bit_2 = NodePath("../Bit6")
+[node name="Swapper2" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_ko3uc")]
+bit_seq = [NodePath("../Bit5"), NodePath("../Bit6")]
 
-[node name="Swapper3" parent="." node_paths=PackedStringArray("bit_1", "bit_2") instance=ExtResource("4_ko3uc")]
-bit_1 = NodePath("../Bit7")
-bit_2 = NodePath("../Bit8")
+[node name="Swapper3" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_ko3uc")]
+bit_seq = [NodePath("../Bit7"), NodePath("../Bit8")]

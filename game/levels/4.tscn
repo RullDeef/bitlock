@@ -205,6 +205,5 @@ clickable = false
 points = PackedVector2Array(640, 0, 640, 720)
 width = 1.0
 
-[node name="Swapper" parent="." node_paths=PackedStringArray("bit_1", "bit_2") instance=ExtResource("4_cjt3l")]
-bit_1 = NodePath("../Bit5")
-bit_2 = NodePath("../Bit3")
+[node name="Swapper" parent="." node_paths=PackedStringArray("bit_seq") instance=ExtResource("4_cjt3l")]
+bit_seq = [NodePath("../Bit5"), NodePath("../Bit3")]
