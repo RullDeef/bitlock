@@ -27,6 +27,7 @@ func decay() -> void:
 
 func activate() -> void:
 	value = max_value
+	$ClickAudioPlayer.play(0.2)
 
 func _update_shader() -> void:
 	if mat != null:

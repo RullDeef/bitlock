@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://0lgsnjm4xes1"]
+[gd_scene load_steps=5 format=3 uid="uid://0lgsnjm4xes1"]
 
 [ext_resource type="Script" uid="uid://blf3u7schpd75" path="res://game/game.gd" id="1_l1rk1"]
 [ext_resource type="Shader" uid="uid://bfm8py65ci27b" path="res://main_menu/main_menu.gdshader" id="1_vasa2"]
+[ext_resource type="AudioStream" uid="uid://dsge0i4jr6fof" path="res://sounds/success.mp3" id="3_h7iqs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h7iqs"]
 shader = ExtResource("1_vasa2")
@@ -25,5 +26,8 @@ offset_top = 16.0
 offset_right = 80.0
 offset_bottom = 47.0
 text = "<-"
+
+[node name="SuccessAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h7iqs")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -42,7 +42,7 @@ func _after_clicked(_bit: Bit) -> void:
 				var bit := child as Bit
 				if not bit.clickable:
 					bit.clickable = true
-		await get_tree().create_timer(1).timeout
+		# await get_tree().create_timer(1).timeout
 		emit_signal(&"level_completed")
 
 func check_solution() -> bool:

@@ -19,6 +19,10 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+MusicManager="*res://sounds/music_scene.tscn"
+
 [display]
 
 window/size/viewport_width=1280
@@ -34,4 +38,5 @@ fonts/dynamic_fonts/use_oversampling=false
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.0666667, 0.0666667, 0, 1)

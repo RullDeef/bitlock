@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctt86lxlmvdf5"]
+
+[ext_resource type="AudioStream" uid="uid://ctiijn5h6dbi4" path="res://sounds/music.mp3" id="1_psbdj"]
+
+[node name="MusicScene" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_psbdj")
+volume_db = -3.0
+autoplay = true

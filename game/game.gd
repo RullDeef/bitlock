@@ -8,6 +8,9 @@ func _ready() -> void:
 	load_level(level_id)
 
 func _on_completed() -> void:
+	$SuccessAudioPlayer.play()
+	await get_tree().create_timer(1.5).timeout
+	$SuccessAudioPlayer.stop()
 	remove_child(bit_holder)
 	bit_holder.level_completed.disconnect(_on_completed)
 	load_level(level_id + 1)
