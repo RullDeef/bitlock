@@ -1,9 +1,46 @@
-[gd_scene format=3 uid="uid://bp5jplk7uuprh"]
+[gd_scene load_steps=4 format=3 uid="uid://bp5jplk7uuprh"]
 
-[node name="LevelsMenu" type="Control"]
-layout_mode = 3
+[ext_resource type="Shader" uid="uid://bfm8py65ci27b" path="res://main_menu/main_menu.gdshader" id="1_s4qfo"]
+[ext_resource type="Script" uid="uid://dhc646i1w1jee" path="res://levels_menu/levels_menu.gd" id="2_st27i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_st27i"]
+shader = ExtResource("1_s4qfo")
+shader_parameter/speed = 1.0
+shader_parameter/scale = 64.0
+
+[node name="LevelsMenu" type="Panel"]
+material = SubResource("ShaderMaterial_st27i")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_st27i")
+
+[node name="LevelButtons" type="HFlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 51.0
+offset_top = 48.0
+offset_right = -47.0
+offset_bottom = 112.0
+grow_horizontal = 2
+
+[node name="BackButton" type="Button" parent="."]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -71.0
+offset_right = 22.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "back"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

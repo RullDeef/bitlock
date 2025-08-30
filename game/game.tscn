@@ -16,3 +16,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l1rk1")
+
+[node name="BackButton" type="Button" parent="."]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 47.0
+text = "<-"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
